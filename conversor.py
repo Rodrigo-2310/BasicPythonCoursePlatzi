@@ -1,0 +1,1 @@
+pesos = int(input('¿Cuántos pesos colombianos tienes?: '))
