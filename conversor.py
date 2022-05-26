@@ -1,19 +1,39 @@
-### --- Programa para convertir pesos comlombianos a dólares --- ###
+# -*- coding: utf-8 -*-
 
-# Le pido al usuario la cantidad de pesos colombianos que tiene.
-pesos = float(input('How many colombian pesos do you have?: '))
+menu = """"
 
-# Equivalencia de un dolar a pesos colombianos.
-valor_dolar = 3875
+Bienvenido al conversor de monedas  
 
-# Realizo el cálculo.
-dolares = pesos / valor_dolar
+1 - Pesos Colombianos
+2 - Pesos Argentinos
+3 - Pesos Mexicanos
 
-# Establezco el numero de decimales que quiero.
-dolares = round(dolares, 2)
+Elige una opcion: 
 
-# Convierto el resultado a una cadena para poderla mostrar.
-dolares = str(dolares)
+"""
 
-# Muestro el resultado de la conversión.
-print('You have $' + dolares + ' dollars')
+opcion = input(menu)
+
+if opcion == 1:
+    pesos = float(input('¿Cuantos pesos colombianos tienes?: '))
+    valor_dolar = 3875
+    dolares = pesos / valor_dolar
+    dolares = round(dolares, 2)
+    dolares = str(dolares)
+    print('Tienes $' + dolares + ' dolares')
+elif opcion == 2:
+    pesos = float(input('¿Cuantos pesos argentinos tienes?: '))
+    valor_dolar = 65
+    dolares = pesos / valor_dolar
+    dolares = round(dolares, 2)
+    dolares = str(dolares)
+    print('Tienes $' + dolares + ' dolares')
+elif opcion == 3:
+    pesos = float(input('¿Cuantos pesos mexicanos tienes?: '))
+    valor_dolar = 24
+    dolares = pesos / valor_dolar
+    dolares = round(dolares, 2)
+    dolares = str(dolares)
+    print('Tienes $' + dolares + ' dolares')
+else:
+    print('Por favor ingresa una opcion correcta...')
